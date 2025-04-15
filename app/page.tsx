@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Briefcase, Users, Zap, Target, Network, Lightbulb, Award, Clock, Calendar, BookOpen, Mail, Phone, Sparkles, Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
+import { Briefcase, Target, Users } from 'lucide-react';
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -16,6 +17,23 @@ export default function Home() {
 
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
+  const audience = [
+  {
+    icon: <Briefcase className="w-8 h-8 text-indigo-600" />,
+    title: 'Placement-Ready Students',
+    desc: 'For final and pre-final year students preparing to land their dream job.',
+  },
+  {
+    icon: <Target className="w-8 h-8 text-indigo-600" />,
+    title: 'Career Explorers',
+    desc: 'Early-career professionals who want clarity on career direction and goals.',
+  },
+  {
+    icon: <Users className="w-8 h-8 text-indigo-600" />,
+    title: 'Growth Seekers',
+    desc: 'Anyone eager to assess their mindset, potential, and readiness to grow.',
+  },
+];
   const team = [
   {
     name: 'Krishna K',
@@ -24,6 +42,14 @@ export default function Home() {
     department: 'Computer Science and Business Systems',
     about:
       'Krishna turns big ideas into reality — from conceptualizing TalentRadar’s mission to ensuring its seamless execution. With a strong foundation in AI, development, and leadership, he drives both innovation and impact, making sure the team’s vision comes to life in practical and purposeful ways.',
+  },
+  {
+    name: 'Sriswasthika A',
+    role: 'Data Analyst & Survey Designer',
+    college: 'K. Ramakrishnan College of Engineering',
+    department: 'Computer Science Engineering (CSE)',
+    about:
+      'Sriswasthika transforms thoughts into structured insights. She crafts intelligent questions and decodes participant data to uncover patterns that fuel strategic improvements in career readiness.',
   },
   {
     name: 'Sanjanah A',
@@ -41,14 +67,7 @@ export default function Home() {
     about:
       'Sowmiya merges creativity with systems thinking. She focuses on user-friendly form layouts and visual clarity, ensuring every touchpoint of the TalentRadar experience is smooth, aesthetic, and impactful.',
   },
-  {
-    name: 'Sriswasthika A',
-    role: 'Data Analyst & Survey Designer',
-    college: 'K. Ramakrishnan College of Engineering',
-    department: 'Computer Science Engineering (CSE)',
-    about:
-      'Sriswasthika transforms thoughts into structured insights. She crafts intelligent questions and decodes participant data to uncover patterns that fuel strategic improvements in career readiness.',
-  },
+  
 ];
 
 
@@ -224,20 +243,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 px-6 bg-white">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-4">Who is this for?</h2>
-        <p className="text-lg mb-6">
-          This initiative is designed for:
+      <section className="bg-gradient-to-br from-indigo-50 to-white py-16 px-6">
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Who Is This For?</h2>
+        <p className="text-lg text-gray-600 mb-10">
+          TalentRadar is designed to empower and guide individuals at different stages of their career journey.
         </p>
-        <ul className="text-left list-disc list-inside space-y-2 text-gray-700">
-          <li>Final/pre-final year students preparing for placements</li>
-          <li>Early-career professionals seeking clarity on their goals</li>
-          <li>Anyone interested in evaluating their career direction, mindset, and growth journey</li>
-        </ul>
-        <p className="mt-6 text-md text-gray-600">
-          Your responses may also lead to hiring opportunities via TalentRadar if your goals align with what top recruiters are looking for.
-        </p>
+        <div className="grid md:grid-cols-3 gap-8">
+          {audience.map((item, index) => (
+            <div key={index} className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all duration-300">
+              <div className="mb-4">{item.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h3>
+              <p className="text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 p-6 bg-indigo-100 rounded-xl shadow-inner">
+          <p className="text-indigo-800 font-medium">
+            💡 <strong>Your responses</strong> may also lead to <strong>real hiring opportunities</strong> via TalentRadar if your goals align with what top recruiters are seeking.
+          </p>
+        </div>
       </div>
     </section>
 
