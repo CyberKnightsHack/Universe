@@ -189,6 +189,23 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-12 px-6 bg-white">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-4">Who is this for?</h2>
+        <p className="text-lg mb-6">
+          This initiative is designed for:
+        </p>
+        <ul className="text-left list-disc list-inside space-y-2 text-gray-700">
+          <li>Final/pre-final year students preparing for placements</li>
+          <li>Early-career professionals seeking clarity on their goals</li>
+          <li>Anyone interested in evaluating their career direction, mindset, and growth journey</li>
+        </ul>
+        <p className="mt-6 text-md text-gray-600">
+          Your responses may also lead to hiring opportunities via TalentRadar if your goals align with what top recruiters are looking for.
+        </p>
+      </div>
+    </section>
+
       {/* Benefits Section - Enhanced with Interactive Cards */}
       <section className="py-24 bg-gradient-to-b from-background to-accent">
         <div className="container mx-auto px-4">
@@ -307,6 +324,59 @@ export default function Home() {
         </div>
       </section>
 
+const team = [
+  {
+    name: 'Krishna K',
+    role: 'Innovation & Execution Lead',
+    college: 'K. Ramakrishnan College of Engineering',
+    department: 'Computer Science and Business Systems',
+    about:
+      'Krishna turns big ideas into reality — from conceptualizing TalentRadar’s mission to ensuring its seamless execution. With a strong foundation in AI, development, and leadership, he drives both innovation and impact, making sure the team’s vision comes to life in practical and purposeful ways.',
+  },
+  {
+    name: 'Sanjanah A',
+    role: 'Research Support & Outreach Strategist',
+    college: 'Thiagarajar College of Engineering, Madurai',
+    department: 'Data Science (DS)',
+    about:
+      'A data enthusiast and effective communicator, Sanjanah is the voice behind the outreach. She ensures the initiative connects with the right people and gains the visibility it deserves across campuses.',
+  },
+  {
+    name: 'Sowmiya S',
+    role: 'System Designer & Visual Experience Coordinator',
+    college: 'K. Ramakrishnan College of Engineering',
+    department: 'Electronics and Communication Engineering (ECE)',
+    about:
+      'Sowmiya merges creativity with systems thinking. She focuses on user-friendly form layouts and visual clarity, ensuring every touchpoint of the TalentRadar experience is smooth, aesthetic, and impactful.',
+  },
+  {
+    name: 'Sriswasthika A',
+    role: 'Data Analyst & Survey Designer',
+    college: 'K. Ramakrishnan College of Engineering',
+    department: 'Computer Science Engineering (CSE)',
+    about:
+      'Sriswasthika transforms thoughts into structured insights. She crafts intelligent questions and decodes participant data to uncover patterns that fuel strategic improvements in career readiness.',
+  },
+];
+
+      
+<section className="py-12 px-6 bg-gray-50">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-8">Meet Our Teammates</h2>
+        <div className="grid md:grid-cols-2 gap-8 text-left">
+          {team.map((member, index) => (
+            <div key={index} className="bg-white p-6 rounded-2xl shadow">
+              <h3 className="text-xl font-semibold text-blue-700">{member.name}</h3>
+              <p className="text-sm text-gray-600 mb-2">{member.role}</p>
+              <p className="text-sm text-gray-500 italic">
+                {member.college} — {member.department}
+              </p>
+              <p className="mt-3 text-gray-700">{member.about}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
      
 
       {/* Footer - New */}
