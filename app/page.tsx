@@ -37,7 +37,7 @@ export default function Home() {
   {
     name: 'Krishna K',
     role: 'Innovation & Execution Lead',
-    college: 'K. Ramakrishnan College of Engineering',
+    college: 'K.Ramakrishnan College of Engineering',
     department: 'Computer Science and Business Systems',
     about:
       'Krishna turns big ideas into reality — from conceptualizing TalentRadar’s mission to ensuring its seamless execution. With a strong foundation in AI, development, and leadership, he drives both innovation and impact, making sure the team’s vision comes to life in practical and purposeful ways.',
@@ -45,7 +45,7 @@ export default function Home() {
   {
     name: 'Sriswasthika A',
     role: 'Data Analyst & Survey Designer',
-    college: 'K. Ramakrishnan College of Engineering',
+    college: 'K.Ramakrishnan College of Engineering',
     department: 'Computer Science Engineering (CSE)',
     about:
       'Sriswasthika transforms thoughts into structured insights. She crafts intelligent questions and decodes participant data to uncover patterns that fuel strategic improvements in career readiness.',
@@ -61,7 +61,7 @@ export default function Home() {
   {
     name: 'Sowmiya S',
     role: 'System Designer & Visual Experience Coordinator',
-    college: 'K. Ramakrishnan College of Engineering',
+    college: 'K.Ramakrishnan College of Engineering',
     department: 'Electronics and Communication Engineering (ECE)',
     about:
       'Sowmiya merges creativity with systems thinking. She focuses on user-friendly form layouts and visual clarity, ensuring every touchpoint of the TalentRadar experience is smooth, aesthetic, and impactful.',
