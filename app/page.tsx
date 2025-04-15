@@ -52,12 +52,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Button size="lg" className="text-lg group">
+            <Button size="lg" className="text-lg group"  onClick={() => window.location.href = 'https://forms.gle/4rCBfmwUQdoVssBV7'}>
               Sign Up Now
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg hover:bg-primary hover:text-primary-foreground transition-colors">
-              Learn More
             </Button>
           </motion.div>
         </div>
@@ -296,10 +293,15 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               whileHover={{ scale: 1.05 }}
             >
-              <Button size="lg" className="text-lg group">
-                Apply Now
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+             <Button
+  size="lg"
+  className="text-lg group"
+  onClick={() => window.location.href = 'https://forms.gle/4rCBfmwUQdoVssBV7'}
+>
+  Apply Now
+  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+</Button>
+
             </motion.div>
           </div>
         </div>
@@ -332,8 +334,8 @@ export default function Home() {
               className="flex items-center"
               >
               <Mail className="h-6 w-6 text-primary" />
-              <a href="mailto:talentradar@gmail.com" className="ml-2 text-lg hover:text-primary transition-colors">
-                talentradar@gmail.com
+              <a href="mailto:syntellects@gmail.com" className="ml-2 text-lg hover:text-primary transition-colors">
+                syntellects@gmail.com
               </a>
               </motion.div>
             </div>
