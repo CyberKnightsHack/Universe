@@ -6,7 +6,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Briefcase, Users, Zap, Target, Network, Lightbulb, Award, Clock, Calendar, BookOpen, Mail, Phone, Sparkles, Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
-import { Briefcase, Target, Users } from 'lucide-react';
 
 export default function Home() {
   const containerRef = useRef(null);
